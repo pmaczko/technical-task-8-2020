@@ -1,0 +1,17 @@
+<mat-card *ngIf="(user$ | async) as user">
+    <mat-card-header>
+        <mat-card-title>{{ user.getBasicProfile().getName() }}</mat-card-title>
+        <mat-card-subtitle>{{ user.getBasicProfile().getEmail() }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="user.getBasicProfile().getImageUrl()" alt="Photo">
+    <mat-card-content>
+        <p>
+            First name: {{ user.getBasicProfile().getGivenName() }}<br/>
+            Last name: {{ user.getBasicProfile().getFamilyName() }}<br/>
+            Profile ID: {{ user.getBasicProfile().getId() }}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="logout()">LOGOUT</button>
+    </mat-card-actions>
+</mat-card>

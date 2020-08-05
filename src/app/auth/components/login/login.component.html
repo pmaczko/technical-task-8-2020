@@ -1,0 +1,8 @@
+<mat-card class="example-card">
+    <mat-card-content>
+        <p>
+            Please log in via Google Account!
+            <button mat-raised-button color="primary" *ngIf="!(isLoggedIn$ | async)" (click)="login()">Login</button>
+        </p>
+    </mat-card-content>
+</mat-card>

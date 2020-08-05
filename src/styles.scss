@@ -1,0 +1,43 @@
+@mixin clearfix() {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 600px;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-left {
+    text-align: left;
+}
